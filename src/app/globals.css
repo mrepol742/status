@@ -1,26 +1,234 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --ink: #1b2420;
+    --muted: #68736d;
+    --line: #dbe3dd;
+    --surface: #ffffff;
+    --green: #16834a;
+    --green-soft: #e9f6ed;
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+    box-sizing: border-box;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+    background: var(--surface);
 }
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: var(--surface);
+    color: var(--ink);
+    font-family: Arial, Helvetica, sans-serif;
+}
+a {
+    color: inherit;
+}
+.page-shell {
+    width: min(100% - 40px, 880px);
+    margin: 0 auto;
+    padding: 28px 0 42px;
+}
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--line);
+    font-size: 14px;
+}
+.wordmark {
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: -0.01em;
+}
+.header-label,
+.eyebrow,
+.section-heading p,
+.monitor p,
+footer {
+    color: var(--muted);
+}
+.hero {
+    padding: 76px 0 64px;
+}
+.eyebrow {
+    margin: 0 0 13px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+h1 {
+    max-width: 580px;
+    margin-bottom: 22px;
+    font-size: clamp(40px, 7vw, 68px);
+    line-height: 0.98;
+    letter-spacing: -0.06em;
+}
+.overall-status,
+.service-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--line);
+    padding: 8px 11px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.overall-status.is-operational,
+.service-status.is-operational {
+    border-color: #b7ddc3;
+    background: var(--green-soft);
+    color: #11643a;
+}
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #aab4ae;
+    flex: 0 0 auto;
+}
+.is-operational .status-dot,
+.empty-state .status-dot {
+    background: var(--green);
+}
+.hero-copy {
+    max-width: 470px;
+    margin: 22px 0 0;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.6;
+}
+.services {
+    border-top: 1px solid var(--line);
+    padding-top: 30px;
+}
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 16px;
+}
+h2 {
+    margin: 0;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+}
+.section-heading p {
+    margin: 0;
+    font-size: 13px;
+}
+.monitor-list {
+    border-top: 1px solid var(--line);
+}
+.monitor {
+    padding: 25px 0;
+    border-bottom: 1px solid var(--line);
+}
+.monitor-topline {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.monitor h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+}
+.monitor p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+.service-status {
+    white-space: nowrap;
+    font-size: 13px;
+}
+.uptime-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 29px;
+}
+.uptime-summary span {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--muted);
+    font-size: 12px;
+}
+.uptime-summary strong {
+    font-size: 22px;
+    letter-spacing: -0.04em;
+}
+.history {
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    gap: 3px;
+    margin-top: 26px;
+}
+.history-day {
+    display: block;
+    height: 8px;
+    background: #e4eae6;
+}
+.history-day.is-up {
+    background: var(--green);
+}
+.incident-note {
+    margin-top: 16px !important;
+    padding-left: 12px;
+    border-left: 2px solid var(--green);
+    line-height: 1.5;
+}
+.empty-state {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    border: 1px solid var(--line);
+    padding: 24px;
+}
+.empty-state h3 {
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+.empty-state p {
+    line-height: 1.5;
+}
+footer {
+    padding-top: 30px;
+    font-size: 13px;
+    text-align: center;
+}
+@media (max-width: 600px) {
+    .page-shell {
+        width: min(100% - 32px, 880px);
+    }
+    .site-header {
+        padding-bottom: 20px;
+    }
+    .hero {
+        padding: 54px 0 46px;
+    }
+    .header-label {
+        display: none;
+    }
+    .monitor-topline {
+        flex-direction: column;
+        gap: 14px;
+    }
+    .uptime-summary {
+        gap: 10px;
+    }
+    .uptime-summary strong {
+        font-size: 19px;
+    }
+    .history {
+        grid-template-columns: repeat(18, 1fr);
+    }
 }
