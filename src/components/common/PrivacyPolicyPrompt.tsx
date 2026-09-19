@@ -122,8 +122,9 @@ export default function CookieBanner() {
         <p className="mt-2 text-sm">
           Read our{" "}
           <Link
-            href="/legal/privacy-policy"
+            href="https://www.melvinjonesrepol.com/legal/privacy-policy"
             className="underline underline-offset-4 hover:text-orange-500"
+            target="_blank"
           >
             Privacy Policy
           </Link>{" "}

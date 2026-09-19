@@ -26,7 +26,12 @@ a {
 .page-shell {
     width: min(100% - 40px, 880px);
     margin: 0 auto;
-    padding: 28px 0 42px;
+    padding: 0 0 42px;
+}
+.site-nav-shell {
+    width: min(100% - 40px, 880px);
+    margin: 0 auto;
+    padding-top: 28px;
 }
 .site-header {
     display: flex;
@@ -74,6 +79,71 @@ footer {
 }
 .hero {
     padding: 76px 0 64px;
+}
+.not-found {
+    display: grid;
+    min-height: min(620px, calc(100vh - 220px));
+    align-content: center;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 48px;
+    padding-top: 80px;
+}
+.not-found h1 {
+    max-width: 650px;
+}
+.not-found-copy {
+    max-width: 480px;
+    margin-bottom: 28px;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.6;
+}
+.not-found-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.not-found-actions a {
+    padding: 10px 13px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.not-found-primary {
+    border: 1px solid var(--green);
+    background: var(--green);
+    color: white;
+}
+.not-found-primary:hover,
+.not-found-primary:focus-visible {
+    background: #11643a;
+    border-color: #11643a;
+}
+.not-found-secondary {
+    border: 1px solid var(--line);
+    color: var(--ink);
+}
+.not-found-secondary:hover,
+.not-found-secondary:focus-visible {
+    border-color: #9acbab;
+    background: var(--green-soft);
+    color: #11643a;
+}
+.not-found-status {
+    display: flex;
+    align-items: center;
+    align-self: end;
+    gap: 8px;
+    padding: 10px 12px;
+    border: 1px solid #b7ddc3;
+    background: var(--green-soft);
+    color: #11643a;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.not-found-status .status-dot {
+    background: var(--green);
 }
 .eyebrow {
     margin: 0 0 13px;
@@ -437,11 +507,28 @@ h2 {
     .page-shell {
         width: min(100% - 32px, 880px);
     }
+    .site-nav-shell {
+        width: min(100% - 32px, 880px);
+        padding-top: 20px;
+    }
     .site-header {
         padding-bottom: 20px;
     }
     .hero {
         padding: 54px 0 46px;
+    }
+    .not-found {
+        display: flex;
+        min-height: min(540px, calc(100vh - 170px));
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 36px;
+        padding-top: 54px;
+    }
+    .not-found-status {
+        align-self: auto;
+        white-space: normal;
     }
     .header-label {
         display: none;

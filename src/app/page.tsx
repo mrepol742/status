@@ -1,7 +1,5 @@
 export const revalidate = 60;
 
-import Navbar from "@/components/layout/Navbar";
-
 const API_URL = "https://stats.uptimerobot.com/api/getMonitorList/IZwUI4mLcR";
 
 type DailyRatio = { date: string; ratio: string; color: string };
@@ -94,8 +92,6 @@ export default async function Home() {
 
   return (
     <main className="page-shell">
-      <Navbar />
-
       <section className="hero" aria-labelledby="page-title">
         <p className="eyebrow">Status</p>
         <h1 id="page-title">Service availability</h1>
