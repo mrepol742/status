@@ -8,7 +8,9 @@ const ContentSecurityPolicy = `
   script-src
     'self'
     'unsafe-inline'
-    'unsafe-eval';
+    'unsafe-eval'
+    https://*.trustpilot.com
+    https://cdn.trustpilot.net;
 
   style-src
     'self'
@@ -28,11 +30,13 @@ const ContentSecurityPolicy = `
 
   connect-src
     'self'
-    https://stats.uptimerobot.com;
+    https://stats.uptimerobot.com
+    https://*.trustpilot.com;
 
   frame-src
     'self'
-    https://stats.uptimerobot.com;
+    https://stats.uptimerobot.com
+    https://*.trustpilot.com;
 
   worker-src 'self' blob:;
   child-src 'self' blob:;
