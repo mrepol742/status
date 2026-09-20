@@ -22,7 +22,6 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <span className="header-label">System status</span>
       </nav>
 
       <details className="mobile-nav">
@@ -38,10 +37,6 @@ export default function Navbar() {
               {label}
             </Link>
           ))}
-          <span className="mobile-status">
-            <span aria-hidden="true" className="status-dot" />
-            System status
-          </span>
         </nav>
       </details>
     </header>
