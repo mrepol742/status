@@ -4,6 +4,21 @@ import { ConsentProvider } from "@/context/consent";
 import CookieBanner from "@/components/common/PrivacyPolicyPrompt";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
+import { Maven_Pro, Sora } from "next/font/google";
+
+const mavenPro = Maven_Pro({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+  variable: "--font-body",
+});
+
+const sora = Sora({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+  variable: "--font-heading",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://status.melvinjonesrepol.com"),
@@ -61,9 +76,18 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${mavenPro.variable} ${sora.variable}`}
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+    >
       <head>
         <meta name="hostname" content="status.melvinjonesrepol.com" />
       </head>

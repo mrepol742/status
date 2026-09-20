@@ -67,6 +67,11 @@ const thirdPartyServices = [
     href: "https://status.wordpress.org/",
     icon: faWordpress,
   },
+  {
+    name: "Upstash",
+    href: "https://status.upstash.com/",
+    mark: "U",
+  },
 ];
 
 async function getMonitors(): Promise<Monitor[]> {
