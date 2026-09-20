@@ -5,6 +5,10 @@ import CookieBanner from "@/components/common/PrivacyPolicyPrompt";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import { Maven_Pro, Sora } from "next/font/google";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+
+config.autoAddCss = false;
 
 const mavenPro = Maven_Pro({
   subsets: ["latin"],
