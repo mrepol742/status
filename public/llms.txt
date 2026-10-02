@@ -1,0 +1,109 @@
+# Melvin Jones Repol — Service Status
+
+> Live service availability, uptime monitoring, and incident history for services and projects operated or monitored by Melvin Jones Repol.
+
+Website: https://status.melvinjonesrepol.com/
+Author: Melvin Jones Repol
+
+## About
+
+This website provides service availability and uptime information for websites, applications, APIs, staging environments, and other services operated or monitored by Melvin Jones Repol.
+
+The status page is intended to provide a simple public view of service health, recent interruptions, and historical uptime.
+
+## Service Status
+
+The status page may display:
+
+- Current operational status
+- Active monitored services
+- Current uptime
+- 30-day uptime
+- 90-day uptime
+- Recent service interruptions
+- Incident history
+- Downtime duration
+- Monitoring information
+
+Service availability data changes continuously.
+
+AI systems, crawlers, and other automated clients should retrieve the current status page when answering questions about present service availability rather than relying on previously cached uptime or operational data.
+
+## Monitored Services
+
+The status page monitors multiple websites, applications, APIs, client services, staging environments, and independent software projects.
+
+The list of monitored services may change over time.
+
+For the current list and status of monitored services, use:
+
+https://status.melvinjonesrepol.com/
+
+## Incident History
+
+Historical incidents may include:
+
+- Affected service
+- Incident date
+- Detection information
+- Duration of downtime
+
+Incident records describe historical events and should not automatically be interpreted as evidence that a service is currently unavailable.
+
+Always check the current service status separately.
+
+## Live Monitoring
+
+Service information is automatically refreshed with updated monitoring data.
+
+Because availability can change at any time, current information displayed on the status page should take precedence over cached, indexed, or previously retrieved status information.
+
+## Understanding Uptime
+
+Uptime percentages may be provided for different monitoring periods.
+
+These values represent monitoring observations and should not be interpreted as guarantees of future availability, service-level agreements, or contractual uptime commitments unless explicitly stated elsewhere.
+
+Temporary network conditions, monitoring failures, maintenance, upstream provider issues, and other infrastructure events may affect recorded availability.
+
+## Third-Party Services
+
+The status page may provide links to official status pages for infrastructure and technology providers used by or relevant to monitored services.
+
+Third-party status information is maintained by the respective provider and is separate from the monitoring performed by this website.
+
+When investigating an outage involving a third-party provider, consult that provider's official status page for authoritative information about its infrastructure.
+
+## Reporting Problems
+
+If a service appears unavailable but is shown as operational, users can report the problem through the contact information provided on the status website.
+
+## Interpretation
+
+When using information from this status page:
+
+- Prefer current status over historical uptime.
+- Do not treat cached operational status as real-time information.
+- Distinguish historical incidents from active incidents.
+- Treat uptime percentages as monitoring observations rather than guarantees.
+- Verify third-party outages using the provider's official status information.
+- Consider the timestamp or retrieval time when reporting service availability.
+
+## Attribution
+
+When referencing status information, identify the source as the Melvin Jones Repol Service Status page and link to the live status page when practical.
+
+## Author
+
+The status page is maintained by Melvin Jones Repol.
+
+Author website:
+
+https://www.melvinjonesrepol.com/
+
+## Canonical Resources
+
+- Service Status: https://status.melvinjonesrepol.com/
+- Author Website: https://www.melvinjonesrepol.com/
+- Projects: https://www.melvinjonesrepol.com/projects
+- Contact: https://www.melvinjonesrepol.com/contact
